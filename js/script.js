@@ -1,13 +1,11 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-// MENU MOBILE
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
 
-// 🌍 TRADUÇÕES
 const translations = {
     pt: {
         hello: "Olá, Me chamo",
@@ -68,7 +66,6 @@ const translations = {
     }
 };
 
-// 🔄 TROCAR IDIOMA
 function setLanguage(lang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.getAttribute('data-lang');
@@ -86,13 +83,13 @@ function setLanguage(lang) {
     localStorage.setItem('lang', lang);
 }
 
-// 🔁 CARREGAR IDIOMA
+
 window.addEventListener("DOMContentLoaded", () => {
     const lang = localStorage.getItem('lang') || 'pt';
     setLanguage(lang);
 });
 
-// 📌 SCROLL ATIVO NO MENU
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -111,11 +108,10 @@ window.onscroll = () => {
         }
     });
 
-    // HEADER FIXO
+    
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
-    // FECHAR MENU MOBILE
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };

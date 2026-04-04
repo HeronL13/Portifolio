@@ -34,6 +34,18 @@ section {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.language-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -538,11 +550,10 @@ portifolio h2 {
 }
 
 .language-switch {
-    position: absolute;
-    left: 20px;
-    top: 20px;
     display: flex;
     gap: 8px;
+    align-items: center;
+    margin-left: auto;
 }
 
 .lang-btn {
@@ -578,9 +589,49 @@ portifolio h2 {
     text-align: center;
 }
 
-/* 🔥 efeito igual botão */
+
 .footer p:hover {
     color: var(--main-color);
     text-shadow: 0 0 10px var(--main-color);
     transition: 0.3s;
+}
+
+.language-switch {
+display: flex !important;
+gap: 8px;
+align-items: center;
+position: static !important;
+}
+
+
+.home {
+margin-top: 90px;
+}
+
+/* mobile corrigido */
+@media (max-width: 768px) {
+
+.home {
+flex-direction: column;
+text-align: center;
+}
+
+.home-content {
+width: 100%;
+}
+
+.home-content h1 {
+font-size: 4rem;
+}
+
+.language-switch {
+width: 100%;
+justify-content: center;
+margin-top: 10px;
+}
+}
+
+.footer {
+position: relative;
+z-index: 1;
 }
