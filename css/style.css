@@ -239,6 +239,8 @@ font-size: 2.6rem;
     font-size: 2.6rem;
 }
 
+
+
 .services-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
@@ -533,4 +535,52 @@ portifolio h2 {
 
 .multiple-text {
     display: inline-block;
+}
+
+.language-switch {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #00f7ff;
+    color: #00f7ff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.lang-btn:hover {
+    background: #00f7ff;
+    color: #000;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.footer p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* 🔥 efeito igual botão */
+.footer p:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+    transition: 0.3s;
 }
